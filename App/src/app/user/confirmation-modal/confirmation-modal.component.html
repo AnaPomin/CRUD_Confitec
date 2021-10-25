@@ -1,0 +1,31 @@
+<div>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Delete User</h4>
+      <button
+        type="button"
+        class="close pull-right"
+        (click)="close()"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="">
+            <p> Are you sure you want to delete this user? </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success" style="margin-right: 10px" (click)="delete()">
+        Confirm
+      </button>
+      <button class="btn btn-dark btn-block" type="button" (click)="close()">
+        Cancel
+      </button>
+    </div>
+</div>

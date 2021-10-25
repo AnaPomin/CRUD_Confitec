@@ -1,0 +1,86 @@
+<div>
+  <form #f="ngForm" (ngSubmit)="submit()">
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">{{ title }}</h4>
+      <button
+        type="button"
+        class="close pull-right"
+        (click)="close()"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="">
+            <div>
+              <label for="name">Name</label>
+              <input
+                class="form-control"
+                type="text"
+                id="name"
+                name="name"
+                [(ngModel)]="user.name"
+              />
+            </div>
+            <div>
+              <label for="lastName">Lastname</label>
+              <input
+                class="form-control"
+                type="text"
+                id="lastName"
+                name="lastName"
+                [(ngModel)]="user.lastName"
+              />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                class="form-control"
+                type="text"
+                id="email"
+                name="email"
+                [(ngModel)]="user.email"
+              />
+            </div>
+            <div>
+              <label for="birthDate">Birthdate</label>
+              <input
+                class="form-control"
+                type="date"
+                id="birthDate"
+                name="birthDate"
+                [(ngModel)]="birthDate"
+              />
+            </div>
+            <div>
+              <label for="scholarity">Scholarity</label>
+              <input
+                class="form-control"
+                type="number"
+                min="0"
+                max="3"
+                step="1"
+                id="scholarity"
+                name="scholarity"
+                [(ngModel)]="user.scholarity"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-success" style="margin-right: 10px">
+        Save
+      </button>
+      <button class="btn btn-dark btn-block" type="button" (click)="close()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
